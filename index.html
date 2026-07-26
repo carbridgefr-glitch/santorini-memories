@@ -29,6 +29,24 @@
 .share{display:grid;gap:22px;padding:clamp(32px,7vw,64px);border-radius:32px;color:#fff;background:radial-gradient(circle at 95% 10%,rgba(255,217,151,.34),transparent 24rem),linear-gradient(135deg,#063b68,#0877b8 64%,#36a6d6);box-shadow:var(--shadow)}.share p{max-width:670px;margin:0;color:rgba(255,255,255,.86)}.share .btn{width:100%}.ctaActions{display:grid;gap:12px}.btnOutline{color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.68);box-shadow:none}.privacyNote{margin-top:12px!important;font-size:.86rem!important;color:rgba(255,255,255,.78)!important}.partnerBrand{display:inline-block;margin:10px auto 15px;padding:14px 22px;border:1px solid rgba(7,94,159,.16);border-radius:999px;color:var(--deep);background:#ecf9ff;font-size:clamp(1.05rem,4vw,1.35rem);font-weight:950}.partnerLogo{width:min(160px,46vw);max-height:100px;margin:0 auto 22px;object-fit:contain}
 footer{padding:28px 18px calc(34px + env(safe-area-inset-bottom));color:#6b7f90;text-align:center;font-size:.82rem}footer a{color:var(--blue);font-weight:850}.reveal{opacity:0;transform:translateY(28px);transition:.7s}.reveal.on{opacity:1;transform:none}.toast{position:fixed;z-index:80;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));max-width:calc(100% - 34px);padding:12px 18px;border-radius:999px;color:#fff;background:rgba(4,42,74,.95);opacity:0;transform:translate(-50%,18px);transition:.22s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
 @keyframes breath{to{transform:scale(1.08) translate(-1%,-1%)}}@media(min-width:720px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card:first-child,.card:nth-child(4),.card:last-child{grid-column:1/-1;min-height:610px}.card:first-child .copy,.card:nth-child(4) .copy,.card:last-child .copy{min-height:610px}.places{grid-template-columns:repeat(3,minmax(0,1fr))}.actions{grid-template-columns:1fr 1fr}.share{grid-template-columns:1fr auto;align-items:center}.share .btn{width:auto;min-width:225px}.ctaActions{min-width:250px}}@media(min-width:1020px){.places{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:430px){.brand{font-size:.78rem}.lang{max-width:135px;font-size:.86rem}.places{grid-template-columns:1fr}.place{display:grid;grid-template-columns:1fr 52px;align-items:center;gap:12px}.placeTop{margin:0}.go{width:52px;height:52px;padding:0;font-size:0;border-radius:16px}.go:after{content:"→";font-size:1.35rem}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* ONLINE PERSONAL MEMORY ALBUM */
+.memoryShell{position:relative;overflow:hidden;padding:clamp(30px,6vw,58px);border-radius:32px;background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(235,249,255,.9));border:1px solid rgba(7,94,159,.13);box-shadow:var(--shadow)}
+.memoryShell:before{content:"";position:absolute;width:320px;height:320px;right:-180px;top:-190px;border-radius:50%;background:radial-gradient(circle,rgba(244,189,103,.35),transparent 68%);pointer-events:none}
+.memoryTop{position:relative;text-align:center;max-width:760px;margin:0 auto 28px}.memoryTop h2{margin:0 0 12px;font:500 clamp(2.25rem,8vw,4.4rem)/1 Georgia,serif;letter-spacing:-.045em}.memoryTop p{margin:0;color:var(--muted)}
+.albumStatus{display:none;margin:16px 0;padding:13px 15px;border-radius:16px;text-align:center;font-weight:800;background:#eaf8ff;color:var(--deep)}.albumStatus.show{display:block}.albumStatus.error{background:#fff0ef;color:#9f2419}.albumStatus.success{background:#ecfbf1;color:#1d6b3a}
+.albumViewer{display:none}.albumViewer.show{display:block}.albumIdentity{text-align:center;margin:8px auto 24px;max-width:760px}.albumIdentity h3{margin:0 0 8px;font:500 clamp(2rem,7vw,3.5rem)/1 Georgia,serif;letter-spacing:-.04em}.albumIdentity p{margin:0;color:var(--muted);white-space:pre-wrap}
+.albumGallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.memoryPhoto{position:relative;overflow:hidden;min-height:210px;border-radius:24px;background:#dceff7;box-shadow:0 14px 36px rgba(6,59,104,.14)}.memoryPhoto:first-child{grid-column:1/-1;min-height:360px}.memoryPhoto img{width:100%;height:100%;min-height:210px;object-fit:cover}.memoryPhoto:first-child img{min-height:360px}.memoryDelete{position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;border-radius:50%;display:grid;place-items:center;color:#fff;background:rgba(3,27,48,.82);font-size:1.15rem;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.2)}
+.albumEmpty{grid-column:1/-1;padding:38px 18px;border:2px dashed rgba(7,94,159,.18);border-radius:22px;text-align:center;color:var(--muted);background:rgba(236,249,255,.62)}
+.albumPanels{display:grid;gap:18px;margin-top:24px}.albumPanel{padding:22px;border:1px solid rgba(7,94,159,.13);border-radius:24px;background:rgba(255,255,255,.92)}.albumPanel[hidden]{display:none}.albumPanel h3{margin:0 0 8px;font-size:1.15rem}.albumPanel p{margin:0 0 16px;color:var(--muted)}
+.albumFields{display:grid;gap:13px}.albumField label{display:block;margin:0 0 6px;font-size:.84rem;font-weight:900;color:var(--deep)}.albumField input,.albumField textarea{width:100%;min-height:52px;padding:12px 14px;border:1px solid rgba(7,94,159,.22);border-radius:15px;color:var(--ink);background:#fff;outline:none}.albumField textarea{min-height:105px;resize:vertical}.albumField input:focus,.albumField textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(7,94,159,.12)}
+.albumButtons{display:grid;gap:11px;margin-top:14px}.albumButtons .btn{width:100%}.uploadLabel{position:relative;overflow:hidden}.uploadLabel input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.ownerBadge{display:none;width:max-content;margin:0 auto 18px;padding:8px 13px;border-radius:999px;color:#1d6b3a;background:#ecfbf1;font-size:.82rem;font-weight:900}.ownerBadge.show{display:block}
+.albumMeta{margin-top:11px;color:var(--muted);font-size:.84rem;text-align:center}.albumDanger{color:#a3251b;background:#fff4f2;border:1px solid rgba(163,37,27,.18);box-shadow:none}
+.noAlbum{display:none;padding:28px;border-radius:22px;text-align:center;color:var(--muted);background:rgba(255,255,255,.86);border:1px dashed rgba(7,94,159,.2)}.noAlbum.show{display:block}
+@media(min-width:720px){.albumGallery{grid-template-columns:repeat(3,minmax(0,1fr))}.memoryPhoto:first-child{grid-column:span 2;grid-row:span 2;min-height:520px}.memoryPhoto:first-child img{min-height:520px}.albumFields.two{grid-template-columns:1fr 1fr}.albumButtons{grid-template-columns:1fr 1fr}}
+@media(max-width:430px){.albumGallery{grid-template-columns:1fr}.memoryPhoto:first-child{grid-column:auto;min-height:300px}.memoryPhoto:first-child img{min-height:300px}}
+
 </style>
 </head>
 <body>
@@ -77,18 +95,71 @@ footer{padding:28px 18px calc(34px + env(safe-area-inset-bottom));color:#6b7f90;
   <div id="nearestResult" class="nearest" aria-live="polite"></div>
 </section>
 
-<section class="section"><div class="share reveal">
-  <div>
-    <p class="kicker" style="color:#ccefff" data-t="shareKicker"></p>
-    <h2 data-t="shareTitle"></h2>
-    <p data-t="shareText"></p>
-    <p class="privacyNote" data-t="privacyNote"></p>
+<section id="personal-memories" class="section">
+  <div class="memoryShell reveal">
+    <div class="memoryTop">
+      <p class="kicker" id="albumKicker">Your private story</p>
+      <h2 id="albumSectionTitle">Your Santorini memories</h2>
+      <p id="albumSectionText">Add your own photos and turn this souvenir into a personal digital album.</p>
+    </div>
+
+    <div id="albumStatus" class="albumStatus" aria-live="polite"></div>
+    <div id="ownerBadge" class="ownerBadge">Album owner</div>
+
+    <div id="noAlbumPanel" class="noAlbum">
+      This page is not connected to a personal keychain album.
+    </div>
+
+    <div id="albumViewer" class="albumViewer">
+      <div class="albumIdentity">
+        <h3 id="publicAlbumTitle">Our Santorini Memories</h3>
+        <p id="publicAlbumDedication"></p>
+      </div>
+      <div id="albumGallery" class="albumGallery"></div>
+      <div id="albumPhotoCount" class="albumMeta"></div>
+    </div>
+
+    <div class="albumPanels">
+      <div id="claimPanel" class="albumPanel" hidden>
+        <h3 id="claimTitle">Activate or edit this album</h3>
+        <p id="claimText">Enter the private code supplied with this keychain. Anyone can view the memories, but only the code holder can edit them.</p>
+        <div class="albumField">
+          <label id="claimLabel" for="claimCode">Private activation code</label>
+          <input id="claimCode" type="text" maxlength="12" autocomplete="one-time-code" placeholder="XXXXXXXX">
+        </div>
+        <div class="albumButtons">
+          <button id="claimButton" class="btn btnBlue" type="button">Activate / Edit album</button>
+          <button id="installBtn" class="btn btnLight" type="button" hidden><span data-t="installBtn"></span></button>
+        </div>
+      </div>
+
+      <div id="editorPanel" class="albumPanel" hidden>
+        <h3 id="editorTitle">Manage your memories</h3>
+        <p id="editorText">Choose a title, write a dedication and upload up to 10 photos.</p>
+
+        <div class="albumFields">
+          <div class="albumField">
+            <label id="titleLabel" for="albumTitleInput">Album title</label>
+            <input id="albumTitleInput" type="text" maxlength="80">
+          </div>
+          <div class="albumField">
+            <label id="dedicationLabel" for="albumDedicationInput">Dedication</label>
+            <textarea id="albumDedicationInput" maxlength="500"></textarea>
+          </div>
+        </div>
+
+        <div class="albumButtons">
+          <button id="saveAlbumButton" class="btn btnBlue" type="button">Save title and dedication</button>
+          <label class="btn btnLight uploadLabel">
+            <span id="uploadButtonText">Add photos</span>
+            <input id="onlinePhotoInput" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+          </label>
+        </div>
+        <div id="uploadHelp" class="albumMeta">Maximum 10 photos. Images are compressed before upload.</div>
+      </div>
+    </div>
   </div>
-  <div class="ctaActions">
-    <a class="btn btnLight" href="memories-test.html"><span data-t="shareBtn"></span></a>
-    <button id="installBtn" class="btn btnOutline" type="button" hidden><span data-t="installBtn"></span></button>
-  </div>
-</div></section>
+</section>
 
 <section class="section"><div class="partner reveal">
   <img id="partnerLogo" class="partnerLogo" alt="" hidden>
@@ -104,6 +175,7 @@ footer{padding:28px 18px calc(34px + env(safe-area-inset-bottom));color:#6b7f90;
 </footer>
 <div id="toast" class="toast" aria-live="polite"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 /* ΑΛΛΑΖΕΙΣ ΜΟΝΟ ΑΥΤΕΣ ΤΙΣ 3 ΓΡΑΜΜΕΣ ΓΙΑ ΚΑΘΕ ΚΑΤΑΣΤΗΜΑ */
 const PARTNER_BRAND="Εδώ θα μπει το brand του καταστήματός σου";
@@ -111,12 +183,12 @@ const PARTNER_URL="";
 const PARTNER_LOGO="";
 
 const T={
-el:{page:"Σαντορίνη — Κράτησε το φως της",heroKicker:"Το νησί του φωτός",heroTitle:"Σαντορίνη",heroText:"Κράτησε μαζί σου το λευκό, το μπλε και τη στιγμή που ο ήλιος χάνεται μέσα στο Αιγαίο.",explore:"Ξεκίνα το ταξίδι",dedKicker:"Μια μικρή αφιέρωση",dedTitle:"Κράτησε για πάντα το φως της",dedText:"Για τις στιγμές που ο ήλιος βυθίζεται στο Αιγαίο και ο χρόνος μοιάζει να σταματά. Ένα μικρό κομμάτι Σαντορίνης, για να επιστρέφεις πάντα σε όσα ένιωσες εδώ.",journeyKicker:"Εικόνες που μένουν",journeyTitle:"Ένα μαγικό ταξίδι στο νησί",journeyText:"Από τους μπλε τρούλους και την Καλντέρα μέχρι τα ήσυχα σοκάκια και τις ηφαιστειακές ακτές.",domesTitle:"Οι μπλε τρούλοι",domesText:"Λευκό, γαλάζιο και ο ορίζοντας του Αιγαίου σε μία εικόνα.",calderaTitle:"Η Καλντέρα",calderaText:"Ένα τοπίο γεννημένο από το ηφαίστειο και ζωγραφισμένο από το φως.",alleyTitle:"Τα σοκάκια",alleyText:"Μικροί δρόμοι που οδηγούν σε αυλές, καμπαναριά και κρυμμένες θέες.",lightTitle:"Ο φάρος",lightText:"Στην άκρη του νησιού, εκεί όπου το ηλιοβασίλεμα συναντά το ανοιχτό πέλαγος.",harborTitle:"Το Αμμούδι",harborText:"Βαρκούλες, γαλάζια νερά και βράχια που ζεσταίνει ο απογευματινός ήλιος.",volcanoTitle:"Η ηφαιστειακή γη",volcanoText:"Κόκκινοι βράχοι και βαθύ μπλε νερό αποκαλύπτουν την άλλη πλευρά του νησιού.",memoryTitle:"Η ανάμνηση",memoryText:"Κάποια μέρη δεν τα αποχαιρετάς. Τα κρατάς μαζί σου.",placesKicker:"Πήγαινε εκεί",placesTitle:"Τα μέρη που αξίζει να ανακαλύψεις",placesText:"Πάτησε ένα σημείο και άνοιξε οδηγίες στο Google Maps από την τρέχουσα τοποθεσία σου.",go:"Οδηγίες",openMap:"Άνοιξε τον χάρτη της Σαντορίνης",nearestBtn:"Τι βρίσκεται πιο κοντά μου;",locating:"Εντοπίζουμε την τοποθεσία σου…",nearest:"Πιο κοντά σου βρίσκεται:",locationError:"Δεν ήταν δυνατή η πρόσβαση στην τοποθεσία. Έλεγξε την άδεια τοποθεσίας του browser.",shareKicker:"Η δική σου ιστορία",shareTitle:"Δημιούργησε τη δική σου ανάμνηση",shareText:"Πρόσθεσε έως 6 προσωπικές φωτογραφίες και κράτησε τις αγαπημένες σου στιγμές από τη Σαντορίνη.",privacyNote:"Οι φωτογραφίες αποθηκεύονται μόνο στο δικό σου κινητό και δεν εμφανίζονται σε άλλους επισκέπτες.",shareBtn:"Πρόσθεσε τις φωτογραφίες σου",installBtn:"Άνοιγμα χωρίς μπάρα",installHelp:"Για να ανοίγει η σελίδα χωρίς τη γραμμή διεύθυνσης, πρόσθεσέ την στην αρχική οθόνη του κινητού σου. Σε iPhone: Κοινοποίηση → Προσθήκη στην οθόνη Αφετηρίας. Σε Android: μενού browser → Εγκατάσταση εφαρμογής ή Προσθήκη στην αρχική οθόνη.",copied:"Ο σύνδεσμος αντιγράφηκε.",partnerKicker:"Η ανάμνησή σου από τη Σαντορίνη",partnerTitle:"Με αγάπη από το νησί του φωτός",partnerText:"Αυτή η ψηφιακή εμπειρία προσφέρεται από το κατάστημα όπου απέκτησες το αναμνηστικό σου.",partnerClose:"Για να θυμάσαι πάντα τη Σαντορίνη.",oia:"Ηλιοβασίλεμα και μπλε τρούλοι",imerovigli:"Καλντέρα και Βράχος του Σκάρου",fira:"Η καρδιά και η πρωτεύουσα του νησιού",pyrgos:"Παραδοσιακό χωριό και πανοραμική θέα",akrotiri:"Ο προϊστορικός οικισμός",red:"Η διάσημη ηφαιστειακή παραλία",lighthouse:"Ηλιοβασίλεμα στην άκρη του νησιού",ammoudi:"Λιμανάκι κάτω από την Οία",perissa:"Μαύρη άμμος και καθαρά νερά",kamari:"Παραλία και παραλιακός περίπατος"},
-en:{page:"Santorini — Keep its light",heroKicker:"The island of light",heroTitle:"Santorini",heroText:"Take with you the white, the blue and the moment when the sun disappears into the Aegean.",explore:"Begin the journey",dedKicker:"A small dedication",dedTitle:"Keep its light forever",dedText:"For the moments when the sun sinks into the Aegean and time seems to stand still. A small piece of Santorini, so you can always return to everything you felt here.",journeyKicker:"Images that remain",journeyTitle:"A magical journey across the island",journeyText:"From blue domes and the Caldera to quiet alleys and volcanic shores.",domesTitle:"The blue domes",domesText:"White, blue and the Aegean horizon in a single image.",calderaTitle:"The Caldera",calderaText:"A landscape born from the volcano and painted by light.",alleyTitle:"The alleys",alleyText:"Small paths leading to courtyards, bell towers and hidden views.",lightTitle:"The lighthouse",lightText:"At the edge of the island, where sunset meets the open sea.",harborTitle:"Ammoudi",harborText:"Small boats, blue water and rocks warmed by the afternoon sun.",volcanoTitle:"The volcanic land",volcanoText:"Red cliffs and deep blue water reveal another side of the island.",memoryTitle:"The memory",memoryText:"Some places are never left behind. You carry them with you.",placesKicker:"Go there",placesTitle:"Places worth discovering",placesText:"Tap a place to open Google Maps directions from your current location.",go:"Directions",openMap:"Open the Santorini map",nearestBtn:"What is closest to me?",locating:"Finding your location…",nearest:"The closest place is:",locationError:"Your location could not be accessed. Check your browser location permission.",shareKicker:"Your own story",shareTitle:"Create your personal memory",shareText:"Add up to 6 personal photos and keep your favorite moments from Santorini.",privacyNote:"The photos are stored only on your device and are not visible to other visitors.",shareBtn:"Add your photos",installBtn:"Open without browser bar",installHelp:"To open the page without the address bar, add it to your phone’s Home Screen. On iPhone: Share → Add to Home Screen. On Android: browser menu → Install app or Add to Home screen.",copied:"The link was copied.",partnerKicker:"Your memory from Santorini",partnerTitle:"With love from the island of light",partnerText:"This digital experience is offered by the shop where you found your souvenir.",partnerClose:"So that Santorini always stays with you.",oia:"Sunset and blue domes",imerovigli:"Caldera and Skaros Rock",fira:"The heart and capital of the island",pyrgos:"Traditional village and panoramic views",akrotiri:"The prehistoric settlement",red:"The famous volcanic beach",lighthouse:"Sunset at the edge of the island",ammoudi:"The little harbor below Oia",perissa:"Black sand and clear water",kamari:"Beach and seaside promenade"},
-de:{page:"Santorin — Bewahre sein Licht",heroKicker:"Die Insel des Lichts",heroTitle:"Santorin",heroText:"Nimm das Weiß, das Blau und den Augenblick mit, in dem die Sonne in der Ägäis versinkt.",explore:"Reise beginnen",dedKicker:"Eine kleine Widmung",dedTitle:"Bewahre sein Licht für immer",dedText:"Für die Augenblicke, in denen die Sonne in der Ägäis versinkt und die Zeit stillzustehen scheint. Ein kleines Stück Santorin, das dich immer an deine Gefühle hier erinnert.",journeyKicker:"Bilder, die bleiben",journeyTitle:"Eine magische Reise über die Insel",journeyText:"Von blauen Kuppeln und der Caldera bis zu stillen Gassen und vulkanischen Küsten.",domesTitle:"Die blauen Kuppeln",domesText:"Weiß, Blau und der Horizont der Ägäis in einem Bild.",calderaTitle:"Die Caldera",calderaText:"Eine vom Vulkan geborene und vom Licht gemalte Landschaft.",alleyTitle:"Die Gassen",alleyText:"Kleine Wege zu Höfen, Glockentürmen und verborgenen Ausblicken.",lightTitle:"Der Leuchtturm",lightText:"Am Rand der Insel, wo der Sonnenuntergang auf das offene Meer trifft.",harborTitle:"Ammoudi",harborText:"Kleine Boote, blaues Wasser und Felsen im warmen Nachmittagslicht.",volcanoTitle:"Das vulkanische Land",volcanoText:"Rote Klippen und tiefblaues Wasser zeigen die andere Seite der Insel.",memoryTitle:"Die Erinnerung",memoryText:"Von manchen Orten verabschiedet man sich nie. Man trägt sie bei sich.",placesKicker:"Fahre dorthin",placesTitle:"Orte, die du entdecken solltest",placesText:"Tippe auf einen Ort und öffne die Google-Maps-Route von deinem Standort.",go:"Route",openMap:"Santorin-Karte öffnen",nearestBtn:"Was ist mir am nächsten?",locating:"Standort wird ermittelt…",nearest:"Am nächsten liegt:",locationError:"Der Standort konnte nicht abgerufen werden. Prüfe die Standortfreigabe deines Browsers.",shareKicker:"Deine eigene Geschichte",shareTitle:"Erstelle deine persönliche Erinnerung",shareText:"Füge bis zu 6 persönliche Fotos hinzu und bewahre deine schönsten Momente aus Santorin.",privacyNote:"Die Fotos werden nur auf deinem Gerät gespeichert und sind für andere Besucher nicht sichtbar.",shareBtn:"Fotos hinzufügen",installBtn:"Ohne Browserleiste öffnen",installHelp:"Um die Seite ohne Adressleiste zu öffnen, füge sie zum Startbildschirm hinzu. Auf dem iPhone: Teilen → Zum Home-Bildschirm. Auf Android: Browsermenü → App installieren oder Zum Startbildschirm hinzufügen.",copied:"Der Link wurde kopiert.",partnerKicker:"Deine Erinnerung an Santorin",partnerTitle:"Mit Liebe von der Insel des Lichts",partnerText:"Dieses digitale Erlebnis wird von dem Geschäft angeboten, in dem du dein Souvenir gefunden hast.",partnerClose:"Damit Santorin immer bei dir bleibt.",oia:"Sonnenuntergang und blaue Kuppeln",imerovigli:"Caldera und Skaros-Felsen",fira:"Herz und Hauptstadt der Insel",pyrgos:"Traditionelles Dorf und Panoramablick",akrotiri:"Die prähistorische Siedlung",red:"Der berühmte Vulkanstrand",lighthouse:"Sonnenuntergang am Inselrand",ammoudi:"Der kleine Hafen unterhalb von Oia",perissa:"Schwarzer Sand und klares Wasser",kamari:"Strand und Uferpromenade"},
-fr:{page:"Santorin — Gardez sa lumière",heroKicker:"L’île de lumière",heroTitle:"Santorin",heroText:"Emportez le blanc, le bleu et l’instant où le soleil disparaît dans la mer Égée.",explore:"Commencer le voyage",dedKicker:"Une petite dédicace",dedTitle:"Gardez sa lumière pour toujours",dedText:"Pour ces instants où le soleil plonge dans la mer Égée et où le temps semble s’arrêter. Un petit morceau de Santorin, pour revenir toujours à ce que vous avez ressenti ici.",journeyKicker:"Des images qui restent",journeyTitle:"Un voyage magique à travers l’île",journeyText:"Des dômes bleus et de la Caldeira aux ruelles paisibles et aux côtes volcaniques.",domesTitle:"Les dômes bleus",domesText:"Le blanc, le bleu et l’horizon de la mer Égée réunis en une image.",calderaTitle:"La Caldeira",calderaText:"Un paysage né du volcan et peint par la lumière.",alleyTitle:"Les ruelles",alleyText:"De petits chemins vers des cours, des clochers et des vues cachées.",lightTitle:"Le phare",lightText:"Au bout de l’île, là où le coucher de soleil rencontre la pleine mer.",harborTitle:"Ammoudi",harborText:"De petites barques, une eau bleue et des rochers réchauffés par le soleil.",volcanoTitle:"La terre volcanique",volcanoText:"Les falaises rouges et l’eau bleu profond révèlent une autre facette de l’île.",memoryTitle:"Le souvenir",memoryText:"Certains lieux ne se quittent jamais. On les emporte avec soi.",placesKicker:"Allez-y",placesTitle:"Les lieux à découvrir",placesText:"Touchez un lieu pour ouvrir l’itinéraire Google Maps depuis votre position.",go:"Itinéraire",openMap:"Ouvrir la carte de Santorin",nearestBtn:"Quel lieu est le plus proche ?",locating:"Recherche de votre position…",nearest:"Le lieu le plus proche est :",locationError:"Votre position n’a pas pu être obtenue. Vérifiez l’autorisation de localisation du navigateur.",shareKicker:"Votre propre histoire",shareTitle:"Créez votre souvenir personnel",shareText:"Ajoutez jusqu’à 6 photos personnelles et gardez vos plus beaux moments de Santorin.",privacyNote:"Les photos sont enregistrées uniquement sur votre appareil et ne sont pas visibles par les autres visiteurs.",shareBtn:"Ajouter vos photos",installBtn:"Ouvrir sans barre du navigateur",installHelp:"Pour ouvrir la page sans barre d’adresse, ajoutez-la à l’écran d’accueil. Sur iPhone : Partager → Sur l’écran d’accueil. Sur Android : menu du navigateur → Installer l’application ou Ajouter à l’écran d’accueil.",copied:"Le lien a été copié.",partnerKicker:"Votre souvenir de Santorin",partnerTitle:"Avec amour depuis l’île de lumière",partnerText:"Cette expérience numérique vous est offerte par la boutique où vous avez trouvé votre souvenir.",partnerClose:"Pour que Santorin reste toujours avec vous.",oia:"Coucher de soleil et dômes bleus",imerovigli:"Caldeira et rocher de Skaros",fira:"Le cœur et la capitale de l’île",pyrgos:"Village traditionnel et vues panoramiques",akrotiri:"Le site préhistorique",red:"La célèbre plage volcanique",lighthouse:"Coucher de soleil au bout de l’île",ammoudi:"Le petit port sous Oia",perissa:"Sable noir et eau claire",kamari:"Plage et promenade en bord de mer"},
-it:{page:"Santorini — Conserva la sua luce",heroKicker:"L’isola della luce",heroTitle:"Santorini",heroText:"Porta con te il bianco, il blu e l’istante in cui il sole scompare nel Mar Egeo.",explore:"Inizia il viaggio",dedKicker:"Una piccola dedica",dedTitle:"Conserva per sempre la sua luce",dedText:"Per i momenti in cui il sole si immerge nell’Egeo e il tempo sembra fermarsi. Un piccolo pezzo di Santorini, per tornare sempre a ciò che hai provato qui.",journeyKicker:"Immagini che restano",journeyTitle:"Un viaggio magico nell’isola",journeyText:"Dalle cupole blu e dalla Caldera ai vicoli tranquilli e alle coste vulcaniche.",domesTitle:"Le cupole blu",domesText:"Bianco, blu e l’orizzonte dell’Egeo in un’unica immagine.",calderaTitle:"La Caldera",calderaText:"Un paesaggio nato dal vulcano e dipinto dalla luce.",alleyTitle:"I vicoli",alleyText:"Piccoli sentieri verso cortili, campanili e panorami nascosti.",lightTitle:"Il faro",lightText:"Ai confini dell’isola, dove il tramonto incontra il mare aperto.",harborTitle:"Ammoudi",harborText:"Piccole barche, acqua azzurra e rocce scaldate dal sole.",volcanoTitle:"La terra vulcanica",volcanoText:"Scogliere rosse e acqua blu profondo mostrano l’altro volto dell’isola.",memoryTitle:"Il ricordo",memoryText:"Ci sono luoghi che non si lasciano mai. Si portano con sé.",placesKicker:"Vai lì",placesTitle:"I luoghi da scoprire",placesText:"Tocca un luogo per aprire le indicazioni di Google Maps dalla tua posizione.",go:"Indicazioni",openMap:"Apri la mappa di Santorini",nearestBtn:"Qual è il luogo più vicino?",locating:"Ricerca della posizione…",nearest:"Il luogo più vicino è:",locationError:"Non è stato possibile accedere alla posizione. Controlla il permesso del browser.",shareKicker:"La tua storia",shareTitle:"Crea il tuo ricordo personale",shareText:"Aggiungi fino a 6 foto personali e conserva i tuoi momenti preferiti di Santorini.",privacyNote:"Le foto vengono salvate solo sul tuo dispositivo e non sono visibili agli altri visitatori.",shareBtn:"Aggiungi le tue foto",installBtn:"Apri senza barra del browser",installHelp:"Per aprire la pagina senza barra degli indirizzi, aggiungila alla schermata Home. Su iPhone: Condividi → Aggiungi alla schermata Home. Su Android: menu del browser → Installa app o Aggiungi a schermata Home.",copied:"Il link è stato copiato.",partnerKicker:"Il tuo ricordo di Santorini",partnerTitle:"Con amore dall’isola della luce",partnerText:"Questa esperienza digitale è offerta dal negozio in cui hai trovato il tuo souvenir.",partnerClose:"Perché Santorini resti sempre con te.",oia:"Tramonto e cupole blu",imerovigli:"Caldera e roccia di Skaros",fira:"Il cuore e il capoluogo dell’isola",pyrgos:"Villaggio tradizionale e viste panoramiche",akrotiri:"L’insediamento preistorico",red:"La famosa spiaggia vulcanica",lighthouse:"Tramonto ai confini dell’isola",ammoudi:"Il piccolo porto sotto Oia",perissa:"Sabbia nera e acqua limpida",kamari:"Spiaggia e passeggiata sul mare"},
-es:{page:"Santorini — Conserva su luz",heroKicker:"La isla de la luz",heroTitle:"Santorini",heroText:"Llévate el blanco, el azul y el instante en que el sol desaparece en el mar Egeo.",explore:"Comenzar el viaje",dedKicker:"Una pequeña dedicatoria",dedTitle:"Conserva su luz para siempre",dedText:"Para esos momentos en que el sol se hunde en el Egeo y el tiempo parece detenerse. Un pequeño pedazo de Santorini, para volver siempre a todo lo que sentiste aquí.",journeyKicker:"Imágenes que permanecen",journeyTitle:"Un viaje mágico por la isla",journeyText:"Desde las cúpulas azules y la Caldera hasta los callejones tranquilos y las costas volcánicas.",domesTitle:"Las cúpulas azules",domesText:"Blanco, azul y el horizonte del Egeo en una sola imagen.",calderaTitle:"La Caldera",calderaText:"Un paisaje nacido del volcán y pintado por la luz.",alleyTitle:"Los callejones",alleyText:"Pequeños caminos hacia patios, campanarios y vistas escondidas.",lightTitle:"El faro",lightText:"En el extremo de la isla, donde el atardecer se encuentra con el mar abierto.",harborTitle:"Ammoudi",harborText:"Pequeñas barcas, agua azul y rocas calentadas por el sol.",volcanoTitle:"La tierra volcánica",volcanoText:"Acantilados rojos y agua azul profundo muestran la otra cara de la isla.",memoryTitle:"El recuerdo",memoryText:"Hay lugares de los que nunca te despides. Los llevas contigo.",placesKicker:"Ve hasta allí",placesTitle:"Lugares que merece la pena descubrir",placesText:"Toca un lugar para abrir las indicaciones de Google Maps desde tu ubicación.",go:"Cómo llegar",openMap:"Abrir el mapa de Santorini",nearestBtn:"¿Qué lugar está más cerca?",locating:"Buscando tu ubicación…",nearest:"El lugar más cercano es:",locationError:"No se pudo acceder a tu ubicación. Comprueba el permiso del navegador.",shareKicker:"Tu propia historia",shareTitle:"Crea tu recuerdo personal",shareText:"Añade hasta 6 fotos personales y conserva tus momentos favoritos de Santorini.",privacyNote:"Las fotos se guardan únicamente en tu dispositivo y no son visibles para otros visitantes.",shareBtn:"Añade tus fotos",installBtn:"Abrir sin barra del navegador",installHelp:"Para abrir la página sin barra de direcciones, añádela a la pantalla de inicio. En iPhone: Compartir → Añadir a pantalla de inicio. En Android: menú del navegador → Instalar aplicación o Añadir a pantalla de inicio.",copied:"El enlace se ha copiado.",partnerKicker:"Tu recuerdo de Santorini",partnerTitle:"Con amor desde la isla de la luz",partnerText:"Esta experiencia digital es ofrecida por la tienda donde encontraste tu recuerdo.",partnerClose:"Para que Santorini siempre permanezca contigo.",oia:"Atardecer y cúpulas azules",imerovigli:"Caldera y roca de Skaros",fira:"El corazón y la capital de la isla",pyrgos:"Pueblo tradicional y vistas panorámicas",akrotiri:"El asentamiento prehistórico",red:"La famosa playa volcánica",lighthouse:"Atardecer en el extremo de la isla",ammoudi:"El pequeño puerto bajo Oia",perissa:"Arena negra y agua transparente",kamari:"Playa y paseo marítimo"}
+el:{page:"Σαντορίνη — Κράτησε το φως της",heroKicker:"Το νησί του φωτός",heroTitle:"Σαντορίνη",heroText:"Κράτησε μαζί σου το λευκό, το μπλε και τη στιγμή που ο ήλιος χάνεται μέσα στο Αιγαίο.",explore:"Ξεκίνα το ταξίδι",dedKicker:"Μια μικρή αφιέρωση",dedTitle:"Κράτησε για πάντα το φως της",dedText:"Για τις στιγμές που ο ήλιος βυθίζεται στο Αιγαίο και ο χρόνος μοιάζει να σταματά. Ένα μικρό κομμάτι Σαντορίνης, για να επιστρέφεις πάντα σε όσα ένιωσες εδώ.",journeyKicker:"Εικόνες που μένουν",journeyTitle:"Ένα μαγικό ταξίδι στο νησί",journeyText:"Από τους μπλε τρούλους και την Καλντέρα μέχρι τα ήσυχα σοκάκια και τις ηφαιστειακές ακτές.",domesTitle:"Οι μπλε τρούλοι",domesText:"Λευκό, γαλάζιο και ο ορίζοντας του Αιγαίου σε μία εικόνα.",calderaTitle:"Η Καλντέρα",calderaText:"Ένα τοπίο γεννημένο από το ηφαίστειο και ζωγραφισμένο από το φως.",alleyTitle:"Τα σοκάκια",alleyText:"Μικροί δρόμοι που οδηγούν σε αυλές, καμπαναριά και κρυμμένες θέες.",lightTitle:"Ο φάρος",lightText:"Στην άκρη του νησιού, εκεί όπου το ηλιοβασίλεμα συναντά το ανοιχτό πέλαγος.",harborTitle:"Το Αμμούδι",harborText:"Βαρκούλες, γαλάζια νερά και βράχια που ζεσταίνει ο απογευματινός ήλιος.",volcanoTitle:"Η ηφαιστειακή γη",volcanoText:"Κόκκινοι βράχοι και βαθύ μπλε νερό αποκαλύπτουν την άλλη πλευρά του νησιού.",memoryTitle:"Η ανάμνηση",memoryText:"Κάποια μέρη δεν τα αποχαιρετάς. Τα κρατάς μαζί σου.",placesKicker:"Πήγαινε εκεί",placesTitle:"Τα μέρη που αξίζει να ανακαλύψεις",placesText:"Πάτησε ένα σημείο και άνοιξε οδηγίες στο Google Maps από την τρέχουσα τοποθεσία σου.",go:"Οδηγίες",openMap:"Άνοιξε τον χάρτη της Σαντορίνης",nearestBtn:"Τι βρίσκεται πιο κοντά μου;",locating:"Εντοπίζουμε την τοποθεσία σου…",nearest:"Πιο κοντά σου βρίσκεται:",locationError:"Δεν ήταν δυνατή η πρόσβαση στην τοποθεσία. Έλεγξε την άδεια τοποθεσίας του browser.",shareKicker:"Η δική σου ιστορία",shareTitle:"Δημιούργησε τη δική σου ανάμνηση",shareText:"Πρόσθεσε έως 10 προσωπικές φωτογραφίες και κράτησε τις αγαπημένες σου στιγμές από τη Σαντορίνη.",privacyNote:"Οι φωτογραφίες αποθηκεύονται στο προσωπικό online άλμπουμ και εμφανίζονται σε όποιον ανοίξει το μοναδικό link του μπρελόκ.",shareBtn:"Πρόσθεσε τις φωτογραφίες σου",installBtn:"Άνοιγμα χωρίς μπάρα",installHelp:"Για να ανοίγει η σελίδα χωρίς τη γραμμή διεύθυνσης, πρόσθεσέ την στην αρχική οθόνη του κινητού σου. Σε iPhone: Κοινοποίηση → Προσθήκη στην οθόνη Αφετηρίας. Σε Android: μενού browser → Εγκατάσταση εφαρμογής ή Προσθήκη στην αρχική οθόνη.",copied:"Ο σύνδεσμος αντιγράφηκε.",partnerKicker:"Η ανάμνησή σου από τη Σαντορίνη",partnerTitle:"Με αγάπη από το νησί του φωτός",partnerText:"Αυτή η ψηφιακή εμπειρία προσφέρεται από το κατάστημα όπου απέκτησες το αναμνηστικό σου.",partnerClose:"Για να θυμάσαι πάντα τη Σαντορίνη.",oia:"Ηλιοβασίλεμα και μπλε τρούλοι",imerovigli:"Καλντέρα και Βράχος του Σκάρου",fira:"Η καρδιά και η πρωτεύουσα του νησιού",pyrgos:"Παραδοσιακό χωριό και πανοραμική θέα",akrotiri:"Ο προϊστορικός οικισμός",red:"Η διάσημη ηφαιστειακή παραλία",lighthouse:"Ηλιοβασίλεμα στην άκρη του νησιού",ammoudi:"Λιμανάκι κάτω από την Οία",perissa:"Μαύρη άμμος και καθαρά νερά",kamari:"Παραλία και παραλιακός περίπατος"},
+en:{page:"Santorini — Keep its light",heroKicker:"The island of light",heroTitle:"Santorini",heroText:"Take with you the white, the blue and the moment when the sun disappears into the Aegean.",explore:"Begin the journey",dedKicker:"A small dedication",dedTitle:"Keep its light forever",dedText:"For the moments when the sun sinks into the Aegean and time seems to stand still. A small piece of Santorini, so you can always return to everything you felt here.",journeyKicker:"Images that remain",journeyTitle:"A magical journey across the island",journeyText:"From blue domes and the Caldera to quiet alleys and volcanic shores.",domesTitle:"The blue domes",domesText:"White, blue and the Aegean horizon in a single image.",calderaTitle:"The Caldera",calderaText:"A landscape born from the volcano and painted by light.",alleyTitle:"The alleys",alleyText:"Small paths leading to courtyards, bell towers and hidden views.",lightTitle:"The lighthouse",lightText:"At the edge of the island, where sunset meets the open sea.",harborTitle:"Ammoudi",harborText:"Small boats, blue water and rocks warmed by the afternoon sun.",volcanoTitle:"The volcanic land",volcanoText:"Red cliffs and deep blue water reveal another side of the island.",memoryTitle:"The memory",memoryText:"Some places are never left behind. You carry them with you.",placesKicker:"Go there",placesTitle:"Places worth discovering",placesText:"Tap a place to open Google Maps directions from your current location.",go:"Directions",openMap:"Open the Santorini map",nearestBtn:"What is closest to me?",locating:"Finding your location…",nearest:"The closest place is:",locationError:"Your location could not be accessed. Check your browser location permission.",shareKicker:"Your own story",shareTitle:"Create your personal memory",shareText:"Add up to 10 personal photos and keep your favorite moments from Santorini.",privacyNote:"The photos are stored in the personal online album and are visible to anyone who opens the unique keychain link.",shareBtn:"Add your photos",installBtn:"Open without browser bar",installHelp:"To open the page without the address bar, add it to your phone’s Home Screen. On iPhone: Share → Add to Home Screen. On Android: browser menu → Install app or Add to Home screen.",copied:"The link was copied.",partnerKicker:"Your memory from Santorini",partnerTitle:"With love from the island of light",partnerText:"This digital experience is offered by the shop where you found your souvenir.",partnerClose:"So that Santorini always stays with you.",oia:"Sunset and blue domes",imerovigli:"Caldera and Skaros Rock",fira:"The heart and capital of the island",pyrgos:"Traditional village and panoramic views",akrotiri:"The prehistoric settlement",red:"The famous volcanic beach",lighthouse:"Sunset at the edge of the island",ammoudi:"The little harbor below Oia",perissa:"Black sand and clear water",kamari:"Beach and seaside promenade"},
+de:{page:"Santorin — Bewahre sein Licht",heroKicker:"Die Insel des Lichts",heroTitle:"Santorin",heroText:"Nimm das Weiß, das Blau und den Augenblick mit, in dem die Sonne in der Ägäis versinkt.",explore:"Reise beginnen",dedKicker:"Eine kleine Widmung",dedTitle:"Bewahre sein Licht für immer",dedText:"Für die Augenblicke, in denen die Sonne in der Ägäis versinkt und die Zeit stillzustehen scheint. Ein kleines Stück Santorin, das dich immer an deine Gefühle hier erinnert.",journeyKicker:"Bilder, die bleiben",journeyTitle:"Eine magische Reise über die Insel",journeyText:"Von blauen Kuppeln und der Caldera bis zu stillen Gassen und vulkanischen Küsten.",domesTitle:"Die blauen Kuppeln",domesText:"Weiß, Blau und der Horizont der Ägäis in einem Bild.",calderaTitle:"Die Caldera",calderaText:"Eine vom Vulkan geborene und vom Licht gemalte Landschaft.",alleyTitle:"Die Gassen",alleyText:"Kleine Wege zu Höfen, Glockentürmen und verborgenen Ausblicken.",lightTitle:"Der Leuchtturm",lightText:"Am Rand der Insel, wo der Sonnenuntergang auf das offene Meer trifft.",harborTitle:"Ammoudi",harborText:"Kleine Boote, blaues Wasser und Felsen im warmen Nachmittagslicht.",volcanoTitle:"Das vulkanische Land",volcanoText:"Rote Klippen und tiefblaues Wasser zeigen die andere Seite der Insel.",memoryTitle:"Die Erinnerung",memoryText:"Von manchen Orten verabschiedet man sich nie. Man trägt sie bei sich.",placesKicker:"Fahre dorthin",placesTitle:"Orte, die du entdecken solltest",placesText:"Tippe auf einen Ort und öffne die Google-Maps-Route von deinem Standort.",go:"Route",openMap:"Santorin-Karte öffnen",nearestBtn:"Was ist mir am nächsten?",locating:"Standort wird ermittelt…",nearest:"Am nächsten liegt:",locationError:"Der Standort konnte nicht abgerufen werden. Prüfe die Standortfreigabe deines Browsers.",shareKicker:"Deine eigene Geschichte",shareTitle:"Erstelle deine persönliche Erinnerung",shareText:"Füge bis zu 10 persönliche Fotos hinzu und bewahre deine schönsten Momente aus Santorin.",privacyNote:"Die Fotos werden im persönlichen Online-Album gespeichert und sind für alle sichtbar, die den einzigartigen Schlüsselanhänger-Link öffnen.",shareBtn:"Fotos hinzufügen",installBtn:"Ohne Browserleiste öffnen",installHelp:"Um die Seite ohne Adressleiste zu öffnen, füge sie zum Startbildschirm hinzu. Auf dem iPhone: Teilen → Zum Home-Bildschirm. Auf Android: Browsermenü → App installieren oder Zum Startbildschirm hinzufügen.",copied:"Der Link wurde kopiert.",partnerKicker:"Deine Erinnerung an Santorin",partnerTitle:"Mit Liebe von der Insel des Lichts",partnerText:"Dieses digitale Erlebnis wird von dem Geschäft angeboten, in dem du dein Souvenir gefunden hast.",partnerClose:"Damit Santorin immer bei dir bleibt.",oia:"Sonnenuntergang und blaue Kuppeln",imerovigli:"Caldera und Skaros-Felsen",fira:"Herz und Hauptstadt der Insel",pyrgos:"Traditionelles Dorf und Panoramablick",akrotiri:"Die prähistorische Siedlung",red:"Der berühmte Vulkanstrand",lighthouse:"Sonnenuntergang am Inselrand",ammoudi:"Der kleine Hafen unterhalb von Oia",perissa:"Schwarzer Sand und klares Wasser",kamari:"Strand und Uferpromenade"},
+fr:{page:"Santorin — Gardez sa lumière",heroKicker:"L’île de lumière",heroTitle:"Santorin",heroText:"Emportez le blanc, le bleu et l’instant où le soleil disparaît dans la mer Égée.",explore:"Commencer le voyage",dedKicker:"Une petite dédicace",dedTitle:"Gardez sa lumière pour toujours",dedText:"Pour ces instants où le soleil plonge dans la mer Égée et où le temps semble s’arrêter. Un petit morceau de Santorin, pour revenir toujours à ce que vous avez ressenti ici.",journeyKicker:"Des images qui restent",journeyTitle:"Un voyage magique à travers l’île",journeyText:"Des dômes bleus et de la Caldeira aux ruelles paisibles et aux côtes volcaniques.",domesTitle:"Les dômes bleus",domesText:"Le blanc, le bleu et l’horizon de la mer Égée réunis en une image.",calderaTitle:"La Caldeira",calderaText:"Un paysage né du volcan et peint par la lumière.",alleyTitle:"Les ruelles",alleyText:"De petits chemins vers des cours, des clochers et des vues cachées.",lightTitle:"Le phare",lightText:"Au bout de l’île, là où le coucher de soleil rencontre la pleine mer.",harborTitle:"Ammoudi",harborText:"De petites barques, une eau bleue et des rochers réchauffés par le soleil.",volcanoTitle:"La terre volcanique",volcanoText:"Les falaises rouges et l’eau bleu profond révèlent une autre facette de l’île.",memoryTitle:"Le souvenir",memoryText:"Certains lieux ne se quittent jamais. On les emporte avec soi.",placesKicker:"Allez-y",placesTitle:"Les lieux à découvrir",placesText:"Touchez un lieu pour ouvrir l’itinéraire Google Maps depuis votre position.",go:"Itinéraire",openMap:"Ouvrir la carte de Santorin",nearestBtn:"Quel lieu est le plus proche ?",locating:"Recherche de votre position…",nearest:"Le lieu le plus proche est :",locationError:"Votre position n’a pas pu être obtenue. Vérifiez l’autorisation de localisation du navigateur.",shareKicker:"Votre propre histoire",shareTitle:"Créez votre souvenir personnel",shareText:"Ajoutez jusqu’à 10 photos personnelles et gardez vos plus beaux moments de Santorin.",privacyNote:"Les photos sont enregistrées dans l’album personnel en ligne et sont visibles par toute personne ouvrant le lien unique du porte-clés.",shareBtn:"Ajouter vos photos",installBtn:"Ouvrir sans barre du navigateur",installHelp:"Pour ouvrir la page sans barre d’adresse, ajoutez-la à l’écran d’accueil. Sur iPhone : Partager → Sur l’écran d’accueil. Sur Android : menu du navigateur → Installer l’application ou Ajouter à l’écran d’accueil.",copied:"Le lien a été copié.",partnerKicker:"Votre souvenir de Santorin",partnerTitle:"Avec amour depuis l’île de lumière",partnerText:"Cette expérience numérique vous est offerte par la boutique où vous avez trouvé votre souvenir.",partnerClose:"Pour que Santorin reste toujours avec vous.",oia:"Coucher de soleil et dômes bleus",imerovigli:"Caldeira et rocher de Skaros",fira:"Le cœur et la capitale de l’île",pyrgos:"Village traditionnel et vues panoramiques",akrotiri:"Le site préhistorique",red:"La célèbre plage volcanique",lighthouse:"Coucher de soleil au bout de l’île",ammoudi:"Le petit port sous Oia",perissa:"Sable noir et eau claire",kamari:"Plage et promenade en bord de mer"},
+it:{page:"Santorini — Conserva la sua luce",heroKicker:"L’isola della luce",heroTitle:"Santorini",heroText:"Porta con te il bianco, il blu e l’istante in cui il sole scompare nel Mar Egeo.",explore:"Inizia il viaggio",dedKicker:"Una piccola dedica",dedTitle:"Conserva per sempre la sua luce",dedText:"Per i momenti in cui il sole si immerge nell’Egeo e il tempo sembra fermarsi. Un piccolo pezzo di Santorini, per tornare sempre a ciò che hai provato qui.",journeyKicker:"Immagini che restano",journeyTitle:"Un viaggio magico nell’isola",journeyText:"Dalle cupole blu e dalla Caldera ai vicoli tranquilli e alle coste vulcaniche.",domesTitle:"Le cupole blu",domesText:"Bianco, blu e l’orizzonte dell’Egeo in un’unica immagine.",calderaTitle:"La Caldera",calderaText:"Un paesaggio nato dal vulcano e dipinto dalla luce.",alleyTitle:"I vicoli",alleyText:"Piccoli sentieri verso cortili, campanili e panorami nascosti.",lightTitle:"Il faro",lightText:"Ai confini dell’isola, dove il tramonto incontra il mare aperto.",harborTitle:"Ammoudi",harborText:"Piccole barche, acqua azzurra e rocce scaldate dal sole.",volcanoTitle:"La terra vulcanica",volcanoText:"Scogliere rosse e acqua blu profondo mostrano l’altro volto dell’isola.",memoryTitle:"Il ricordo",memoryText:"Ci sono luoghi che non si lasciano mai. Si portano con sé.",placesKicker:"Vai lì",placesTitle:"I luoghi da scoprire",placesText:"Tocca un luogo per aprire le indicazioni di Google Maps dalla tua posizione.",go:"Indicazioni",openMap:"Apri la mappa di Santorini",nearestBtn:"Qual è il luogo più vicino?",locating:"Ricerca della posizione…",nearest:"Il luogo più vicino è:",locationError:"Non è stato possibile accedere alla posizione. Controlla il permesso del browser.",shareKicker:"La tua storia",shareTitle:"Crea il tuo ricordo personale",shareText:"Aggiungi fino a 10 foto personali e conserva i tuoi momenti preferiti di Santorini.",privacyNote:"Le foto vengono salvate nell’album personale online e sono visibili a chi apre il link univoco del portachiavi.",shareBtn:"Aggiungi le tue foto",installBtn:"Apri senza barra del browser",installHelp:"Per aprire la pagina senza barra degli indirizzi, aggiungila alla schermata Home. Su iPhone: Condividi → Aggiungi alla schermata Home. Su Android: menu del browser → Installa app o Aggiungi a schermata Home.",copied:"Il link è stato copiato.",partnerKicker:"Il tuo ricordo di Santorini",partnerTitle:"Con amore dall’isola della luce",partnerText:"Questa esperienza digitale è offerta dal negozio in cui hai trovato il tuo souvenir.",partnerClose:"Perché Santorini resti sempre con te.",oia:"Tramonto e cupole blu",imerovigli:"Caldera e roccia di Skaros",fira:"Il cuore e il capoluogo dell’isola",pyrgos:"Villaggio tradizionale e viste panoramiche",akrotiri:"L’insediamento preistorico",red:"La famosa spiaggia vulcanica",lighthouse:"Tramonto ai confini dell’isola",ammoudi:"Il piccolo porto sotto Oia",perissa:"Sabbia nera e acqua limpida",kamari:"Spiaggia e passeggiata sul mare"},
+es:{page:"Santorini — Conserva su luz",heroKicker:"La isla de la luz",heroTitle:"Santorini",heroText:"Llévate el blanco, el azul y el instante en que el sol desaparece en el mar Egeo.",explore:"Comenzar el viaje",dedKicker:"Una pequeña dedicatoria",dedTitle:"Conserva su luz para siempre",dedText:"Para esos momentos en que el sol se hunde en el Egeo y el tiempo parece detenerse. Un pequeño pedazo de Santorini, para volver siempre a todo lo que sentiste aquí.",journeyKicker:"Imágenes que permanecen",journeyTitle:"Un viaje mágico por la isla",journeyText:"Desde las cúpulas azules y la Caldera hasta los callejones tranquilos y las costas volcánicas.",domesTitle:"Las cúpulas azules",domesText:"Blanco, azul y el horizonte del Egeo en una sola imagen.",calderaTitle:"La Caldera",calderaText:"Un paisaje nacido del volcán y pintado por la luz.",alleyTitle:"Los callejones",alleyText:"Pequeños caminos hacia patios, campanarios y vistas escondidas.",lightTitle:"El faro",lightText:"En el extremo de la isla, donde el atardecer se encuentra con el mar abierto.",harborTitle:"Ammoudi",harborText:"Pequeñas barcas, agua azul y rocas calentadas por el sol.",volcanoTitle:"La tierra volcánica",volcanoText:"Acantilados rojos y agua azul profundo muestran la otra cara de la isla.",memoryTitle:"El recuerdo",memoryText:"Hay lugares de los que nunca te despides. Los llevas contigo.",placesKicker:"Ve hasta allí",placesTitle:"Lugares que merece la pena descubrir",placesText:"Toca un lugar para abrir las indicaciones de Google Maps desde tu ubicación.",go:"Cómo llegar",openMap:"Abrir el mapa de Santorini",nearestBtn:"¿Qué lugar está más cerca?",locating:"Buscando tu ubicación…",nearest:"El lugar más cercano es:",locationError:"No se pudo acceder a tu ubicación. Comprueba el permiso del navegador.",shareKicker:"Tu propia historia",shareTitle:"Crea tu recuerdo personal",shareText:"Añade hasta 10 fotos personales y conserva tus momentos favoritos de Santorini.",privacyNote:"Las fotos se guardan en el álbum personal online y son visibles para quien abra el enlace único del llavero.",shareBtn:"Añade tus fotos",installBtn:"Abrir sin barra del navegador",installHelp:"Para abrir la página sin barra de direcciones, añádela a la pantalla de inicio. En iPhone: Compartir → Añadir a pantalla de inicio. En Android: menú del navegador → Instalar aplicación o Añadir a pantalla de inicio.",copied:"El enlace se ha copiado.",partnerKicker:"Tu recuerdo de Santorini",partnerTitle:"Con amor desde la isla de la luz",partnerText:"Esta experiencia digital es ofrecida por la tienda donde encontraste tu recuerdo.",partnerClose:"Para que Santorini siempre permanezca contigo.",oia:"Atardecer y cúpulas azules",imerovigli:"Caldera y roca de Skaros",fira:"El corazón y la capital de la isla",pyrgos:"Pueblo tradicional y vistas panorámicas",akrotiri:"El asentamiento prehistórico",red:"La famosa playa volcánica",lighthouse:"Atardecer en el extremo de la isla",ammoudi:"El pequeño puerto bajo Oia",perissa:"Arena negra y agua transparente",kamari:"Playa y paseo marítimo"}
 };
 
 const P=[
@@ -168,5 +240,427 @@ const pb=$("#partnerBrand"),pl=$("#partnerLogo");pb.textContent=PARTNER_BRAND;if
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");obs.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll(".reveal").forEach(e=>obs.observe(e));
 apply(lang);
 </script>
+
+<script>
+(() => {
+  const SUPABASE_URL = "https://cyygcwyxvaibqiqehdgy.supabase.co";
+  const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_4Lo5hVJTkaORvhYHSr_GsQ_-YYQI6r1";
+  const BUCKET = "album-photos";
+  const MAX_PHOTOS = 10;
+  const MAX_SIDE = 1600;
+  const JPEG_QUALITY = 0.82;
+
+  const albumSlug = (new URLSearchParams(location.search).get("album") || "").trim().toUpperCase();
+  const sb = window.supabase ? window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY,
+    { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } }
+  ) : null;
+
+  const els = {
+    status: document.getElementById("albumStatus"),
+    noAlbum: document.getElementById("noAlbumPanel"),
+    viewer: document.getElementById("albumViewer"),
+    gallery: document.getElementById("albumGallery"),
+    count: document.getElementById("albumPhotoCount"),
+    publicTitle: document.getElementById("publicAlbumTitle"),
+    publicDedication: document.getElementById("publicAlbumDedication"),
+    claimPanel: document.getElementById("claimPanel"),
+    claimCode: document.getElementById("claimCode"),
+    claimButton: document.getElementById("claimButton"),
+    editorPanel: document.getElementById("editorPanel"),
+    ownerBadge: document.getElementById("ownerBadge"),
+    titleInput: document.getElementById("albumTitleInput"),
+    dedicationInput: document.getElementById("albumDedicationInput"),
+    saveButton: document.getElementById("saveAlbumButton"),
+    photoInput: document.getElementById("onlinePhotoInput"),
+    albumKicker: document.getElementById("albumKicker"),
+    albumSectionTitle: document.getElementById("albumSectionTitle"),
+    albumSectionText: document.getElementById("albumSectionText"),
+    claimTitle: document.getElementById("claimTitle"),
+    claimText: document.getElementById("claimText"),
+    claimLabel: document.getElementById("claimLabel"),
+    editorTitle: document.getElementById("editorTitle"),
+    editorText: document.getElementById("editorText"),
+    titleLabel: document.getElementById("titleLabel"),
+    dedicationLabel: document.getElementById("dedicationLabel"),
+    uploadButtonText: document.getElementById("uploadButtonText"),
+    uploadHelp: document.getElementById("uploadHelp")
+  };
+
+  const M = {
+    el: {
+      kicker:"Η δική σου ιστορία",sectionTitle:"Οι δικές σου αναμνήσεις από τη Σαντορίνη",sectionText:"Πρόσθεσε τις φωτογραφίες σου και μετέτρεψε αυτό το αναμνηστικό σε προσωπικό ψηφιακό άλμπουμ.",
+      noAlbum:"Αυτή η σελίδα δεν είναι συνδεδεμένη με προσωπικό άλμπουμ μπρελόκ.",loading:"Φόρτωση προσωπικού άλμπουμ…",notFound:"Δεν βρέθηκε αυτό το άλμπουμ.",
+      empty:"Δεν έχουν προστεθεί ακόμη φωτογραφίες.",photos:n=>`${n} από ${MAX_PHOTOS} φωτογραφίες`,
+      claimTitle:"Ενεργοποίηση ή επεξεργασία άλμπουμ",claimText:"Πληκτρολόγησε τον ιδιωτικό κωδικό που συνοδεύει το μπρελόκ. Όλοι μπορούν να βλέπουν τις αναμνήσεις, αλλά μόνο ο κάτοχος του κωδικού μπορεί να τις αλλάζει.",claimLabel:"Ιδιωτικός κωδικός ενεργοποίησης",claimButton:"Ενεργοποίηση / Επεξεργασία",
+      owner:"Ιδιοκτήτης άλμπουμ",editorTitle:"Διαχείριση αναμνήσεων",editorText:"Διάλεξε τίτλο, γράψε μια αφιέρωση και ανέβασε έως 10 φωτογραφίες.",titleLabel:"Τίτλος άλμπουμ",dedicationLabel:"Αφιέρωση",save:"Αποθήκευση τίτλου και αφιέρωσης",upload:"Πρόσθεσε φωτογραφίες",uploadHelp:"Έως 10 φωτογραφίες. Οι εικόνες συμπιέζονται πριν ανέβουν.",
+      activating:"Ενεργοποίηση…",invalidCode:"Ο κωδικός δεν είναι σωστός.",activated:"Το άλμπουμ ενεργοποιήθηκε.",saving:"Αποθήκευση…",saved:"Οι αλλαγές αποθηκεύτηκαν.",uploading:"Ανέβασμα φωτογραφιών…",uploaded:"Οι φωτογραφίες προστέθηκαν.",limit:"Το άλμπουμ έχει ήδη 10 φωτογραφίες.",deleteConfirm:"Να διαγραφεί αυτή η φωτογραφία;",deleted:"Η φωτογραφία διαγράφηκε.",error:"Παρουσιάστηκε σφάλμα. Δοκίμασε ξανά.",libraryError:"Η σύνδεση με το online άλμπουμ δεν φορτώθηκε."
+    },
+    en: {
+      kicker:"Your private story",sectionTitle:"Your Santorini memories",sectionText:"Add your own photos and turn this souvenir into a personal digital album.",
+      noAlbum:"This page is not connected to a personal keychain album.",loading:"Loading personal album…",notFound:"This album could not be found.",
+      empty:"No photos have been added yet.",photos:n=>`${n} of ${MAX_PHOTOS} photos`,
+      claimTitle:"Activate or edit this album",claimText:"Enter the private code supplied with this keychain. Anyone can view the memories, but only the code holder can edit them.",claimLabel:"Private activation code",claimButton:"Activate / Edit album",
+      owner:"Album owner",editorTitle:"Manage your memories",editorText:"Choose a title, write a dedication and upload up to 10 photos.",titleLabel:"Album title",dedicationLabel:"Dedication",save:"Save title and dedication",upload:"Add photos",uploadHelp:"Maximum 10 photos. Images are compressed before upload.",
+      activating:"Activating…",invalidCode:"The code is not correct.",activated:"The album is now activated.",saving:"Saving…",saved:"Your changes were saved.",uploading:"Uploading photos…",uploaded:"The photos were added.",limit:"This album already has 10 photos.",deleteConfirm:"Delete this photo?",deleted:"The photo was deleted.",error:"Something went wrong. Please try again.",libraryError:"The online album connection did not load."
+    },
+    de: {
+      kicker:"Deine persönliche Geschichte",sectionTitle:"Deine Santorin-Erinnerungen",sectionText:"Füge deine Fotos hinzu und verwandle dieses Souvenir in ein persönliches digitales Album.",
+      noAlbum:"Diese Seite ist nicht mit einem persönlichen Schlüsselanhänger-Album verbunden.",loading:"Persönliches Album wird geladen…",notFound:"Dieses Album wurde nicht gefunden.",
+      empty:"Es wurden noch keine Fotos hinzugefügt.",photos:n=>`${n} von ${MAX_PHOTOS} Fotos`,
+      claimTitle:"Album aktivieren oder bearbeiten",claimText:"Gib den privaten Code ein, der diesem Schlüsselanhänger beiliegt. Alle können die Erinnerungen ansehen, aber nur der Codeinhaber kann sie bearbeiten.",claimLabel:"Privater Aktivierungscode",claimButton:"Aktivieren / Bearbeiten",
+      owner:"Albuminhaber",editorTitle:"Erinnerungen verwalten",editorText:"Wähle einen Titel, schreibe eine Widmung und lade bis zu 10 Fotos hoch.",titleLabel:"Albumtitel",dedicationLabel:"Widmung",save:"Titel und Widmung speichern",upload:"Fotos hinzufügen",uploadHelp:"Maximal 10 Fotos. Die Bilder werden vor dem Hochladen komprimiert.",
+      activating:"Aktivierung…",invalidCode:"Der Code ist nicht korrekt.",activated:"Das Album wurde aktiviert.",saving:"Speichern…",saved:"Änderungen gespeichert.",uploading:"Fotos werden hochgeladen…",uploaded:"Fotos wurden hinzugefügt.",limit:"Dieses Album enthält bereits 10 Fotos.",deleteConfirm:"Dieses Foto löschen?",deleted:"Foto gelöscht.",error:"Etwas ist schiefgelaufen. Bitte erneut versuchen.",libraryError:"Die Verbindung zum Online-Album wurde nicht geladen."
+    },
+    fr: {
+      kicker:"Votre histoire personnelle",sectionTitle:"Vos souvenirs de Santorin",sectionText:"Ajoutez vos photos et transformez ce souvenir en album numérique personnel.",
+      noAlbum:"Cette page n’est pas liée à un album personnel de porte-clés.",loading:"Chargement de l’album personnel…",notFound:"Cet album est introuvable.",
+      empty:"Aucune photo n’a encore été ajoutée.",photos:n=>`${n} photo(s) sur ${MAX_PHOTOS}`,
+      claimTitle:"Activer ou modifier cet album",claimText:"Saisissez le code privé fourni avec ce porte-clés. Tout le monde peut voir les souvenirs, mais seul le détenteur du code peut les modifier.",claimLabel:"Code privé d’activation",claimButton:"Activer / Modifier",
+      owner:"Propriétaire de l’album",editorTitle:"Gérer vos souvenirs",editorText:"Choisissez un titre, écrivez une dédicace et ajoutez jusqu’à 10 photos.",titleLabel:"Titre de l’album",dedicationLabel:"Dédicace",save:"Enregistrer le titre et la dédicace",upload:"Ajouter des photos",uploadHelp:"Maximum 10 photos. Les images sont compressées avant l’envoi.",
+      activating:"Activation…",invalidCode:"Le code est incorrect.",activated:"L’album est activé.",saving:"Enregistrement…",saved:"Modifications enregistrées.",uploading:"Envoi des photos…",uploaded:"Photos ajoutées.",limit:"Cet album contient déjà 10 photos.",deleteConfirm:"Supprimer cette photo ?",deleted:"Photo supprimée.",error:"Une erreur est survenue. Réessayez.",libraryError:"La connexion à l’album en ligne n’a pas été chargée."
+    },
+    it: {
+      kicker:"La tua storia personale",sectionTitle:"I tuoi ricordi di Santorini",sectionText:"Aggiungi le tue foto e trasforma questo souvenir in un album digitale personale.",
+      noAlbum:"Questa pagina non è collegata a un album personale del portachiavi.",loading:"Caricamento dell’album personale…",notFound:"Album non trovato.",
+      empty:"Non sono state ancora aggiunte foto.",photos:n=>`${n} foto su ${MAX_PHOTOS}`,
+      claimTitle:"Attiva o modifica l’album",claimText:"Inserisci il codice privato fornito con il portachiavi. Tutti possono vedere i ricordi, ma solo chi possiede il codice può modificarli.",claimLabel:"Codice privato di attivazione",claimButton:"Attiva / Modifica",
+      owner:"Proprietario dell’album",editorTitle:"Gestisci i tuoi ricordi",editorText:"Scegli un titolo, scrivi una dedica e carica fino a 10 foto.",titleLabel:"Titolo dell’album",dedicationLabel:"Dedica",save:"Salva titolo e dedica",upload:"Aggiungi foto",uploadHelp:"Massimo 10 foto. Le immagini vengono compresse prima del caricamento.",
+      activating:"Attivazione…",invalidCode:"Il codice non è corretto.",activated:"Album attivato.",saving:"Salvataggio…",saved:"Modifiche salvate.",uploading:"Caricamento delle foto…",uploaded:"Foto aggiunte.",limit:"Questo album contiene già 10 foto.",deleteConfirm:"Eliminare questa foto?",deleted:"Foto eliminata.",error:"Si è verificato un errore. Riprova.",libraryError:"La connessione all’album online non è stata caricata."
+    },
+    es: {
+      kicker:"Tu historia personal",sectionTitle:"Tus recuerdos de Santorini",sectionText:"Añade tus fotos y convierte este recuerdo en un álbum digital personal.",
+      noAlbum:"Esta página no está vinculada a un álbum personal del llavero.",loading:"Cargando el álbum personal…",notFound:"No se encontró este álbum.",
+      empty:"Todavía no se han añadido fotos.",photos:n=>`${n} de ${MAX_PHOTOS} fotos`,
+      claimTitle:"Activar o editar el álbum",claimText:"Introduce el código privado incluido con este llavero. Todos pueden ver los recuerdos, pero solo el titular del código puede modificarlos.",claimLabel:"Código privado de activación",claimButton:"Activar / Editar",
+      owner:"Propietario del álbum",editorTitle:"Gestiona tus recuerdos",editorText:"Elige un título, escribe una dedicatoria y sube hasta 10 fotos.",titleLabel:"Título del álbum",dedicationLabel:"Dedicatoria",save:"Guardar título y dedicatoria",upload:"Añadir fotos",uploadHelp:"Máximo 10 fotos. Las imágenes se comprimen antes de subirlas.",
+      activating:"Activando…",invalidCode:"El código no es correcto.",activated:"Álbum activado.",saving:"Guardando…",saved:"Cambios guardados.",uploading:"Subiendo fotos…",uploaded:"Fotos añadidas.",limit:"Este álbum ya tiene 10 fotos.",deleteConfirm:"¿Eliminar esta foto?",deleted:"Foto eliminada.",error:"Ha ocurrido un error. Inténtalo de nuevo.",libraryError:"No se cargó la conexión con el álbum online."
+    }
+  };
+
+  let album = null;
+  let photos = [];
+  let session = null;
+  let isOwner = false;
+
+  function tx() {
+    const current = (typeof lang !== "undefined" && M[lang]) ? lang : "en";
+    return M[current];
+  }
+
+  function setStatus(message, type="") {
+    els.status.textContent = message || "";
+    els.status.className = "albumStatus" + (message ? " show" : "") + (type ? " " + type : "");
+  }
+
+  function applyAlbumLanguage() {
+    const t = tx();
+    els.albumKicker.textContent = t.kicker;
+    els.albumSectionTitle.textContent = t.sectionTitle;
+    els.albumSectionText.textContent = t.sectionText;
+    els.noAlbum.textContent = t.noAlbum;
+    els.claimTitle.textContent = t.claimTitle;
+    els.claimText.textContent = t.claimText;
+    els.claimLabel.textContent = t.claimLabel;
+    els.claimButton.textContent = t.claimButton;
+    els.ownerBadge.textContent = t.owner;
+    els.editorTitle.textContent = t.editorTitle;
+    els.editorText.textContent = t.editorText;
+    els.titleLabel.textContent = t.titleLabel;
+    els.dedicationLabel.textContent = t.dedicationLabel;
+    els.saveButton.textContent = t.save;
+    els.uploadButtonText.textContent = t.upload;
+    els.uploadHelp.textContent = t.uploadHelp;
+    renderGallery();
+  }
+
+  async function ensureSession() {
+    const { data } = await sb.auth.getSession();
+    session = data.session;
+    if (!session) {
+      const result = await sb.auth.signInAnonymously();
+      if (result.error) throw result.error;
+      session = result.data.session;
+    }
+    return session;
+  }
+
+  async function getPersistedSession() {
+    const { data } = await sb.auth.getSession();
+    session = data.session;
+  }
+
+  async function fetchAlbum() {
+    const { data, error } = await sb.rpc("get_album_by_slug", { p_slug: albumSlug });
+    if (error) throw error;
+    album = Array.isArray(data) ? data[0] : data;
+    return album;
+  }
+
+  async function fetchPhotos() {
+    const { data, error } = await sb.rpc("get_album_photos", { p_slug: albumSlug });
+    if (error) throw error;
+    photos = data || [];
+  }
+
+  async function checkOwner() {
+    isOwner = false;
+    if (!session || !album) return;
+    const { data, error } = await sb
+      .from("albums")
+      .select("id,title,dedication")
+      .eq("id", album.id)
+      .maybeSingle();
+    if (!error && data) {
+      isOwner = true;
+      album.title = data.title;
+      album.dedication = data.dedication;
+    }
+  }
+
+  function publicUrl(path) {
+    return sb.storage.from(BUCKET).getPublicUrl(path).data.publicUrl;
+  }
+
+  function renderGallery() {
+    if (!els.gallery) return;
+    const t = tx();
+    els.gallery.innerHTML = "";
+    els.count.textContent = t.photos(photos.length);
+
+    if (!photos.length) {
+      els.gallery.innerHTML = `<div class="albumEmpty">${t.empty}</div>`;
+      return;
+    }
+
+    photos.forEach(photo => {
+      const card = document.createElement("article");
+      card.className = "memoryPhoto";
+      const image = document.createElement("img");
+      image.src = publicUrl(photo.storage_path);
+      image.alt = album?.title || "Santorini memory";
+      image.loading = "lazy";
+      card.appendChild(image);
+
+      if (isOwner) {
+        const del = document.createElement("button");
+        del.className = "memoryDelete";
+        del.type = "button";
+        del.setAttribute("aria-label", "Delete photo");
+        del.textContent = "×";
+        del.addEventListener("click", () => deletePhoto(photo));
+        card.appendChild(del);
+      }
+      els.gallery.appendChild(card);
+    });
+  }
+
+  function renderState() {
+    if (!album) return;
+    els.viewer.classList.add("show");
+    els.publicTitle.textContent = album.title || "Our Santorini Memories";
+    els.publicDedication.textContent = album.dedication || "";
+    els.ownerBadge.classList.toggle("show", isOwner);
+    els.editorPanel.hidden = !isOwner;
+    els.claimPanel.hidden = isOwner;
+    els.titleInput.value = album.title || "";
+    els.dedicationInput.value = album.dedication || "";
+    renderGallery();
+  }
+
+  async function claimAlbum() {
+    const code = els.claimCode.value.trim().toUpperCase();
+    if (!code) return;
+    const t = tx();
+    setStatus(t.activating);
+    els.claimButton.disabled = true;
+    try {
+      await ensureSession();
+      const { data, error } = await sb.rpc("claim_album", { p_slug: albumSlug, p_code: code });
+      if (error) throw error;
+      if (!data) {
+        setStatus(t.invalidCode, "error");
+        return;
+      }
+      setStatus(t.activated, "success");
+      els.claimCode.value = "";
+      await fetchAlbum();
+      await checkOwner();
+      renderState();
+    } catch (error) {
+      console.error(error);
+      setStatus(t.error, "error");
+    } finally {
+      els.claimButton.disabled = false;
+    }
+  }
+
+  async function saveAlbum() {
+    if (!isOwner || !session) return;
+    const t = tx();
+    setStatus(t.saving);
+    els.saveButton.disabled = true;
+    try {
+      const title = els.titleInput.value.trim() || "Our Santorini Memories";
+      const dedication = els.dedicationInput.value.trim();
+      const { error } = await sb
+        .from("albums")
+        .update({ title, dedication })
+        .eq("id", album.id);
+      if (error) throw error;
+      album.title = title;
+      album.dedication = dedication;
+      renderState();
+      setStatus(t.saved, "success");
+    } catch (error) {
+      console.error(error);
+      setStatus(t.error, "error");
+    } finally {
+      els.saveButton.disabled = false;
+    }
+  }
+
+  function loadImage(file) {
+    return new Promise((resolve, reject) => {
+      const url = URL.createObjectURL(file);
+      const img = new Image();
+      img.onload = () => { URL.revokeObjectURL(url); resolve(img); };
+      img.onerror = () => { URL.revokeObjectURL(url); reject(new Error("Invalid image")); };
+      img.src = url;
+    });
+  }
+
+  async function compress(file) {
+    const img = await loadImage(file);
+    let width = img.naturalWidth;
+    let height = img.naturalHeight;
+    const scale = Math.min(1, MAX_SIDE / Math.max(width, height));
+    width = Math.round(width * scale);
+    height = Math.round(height * scale);
+    const canvas = document.createElement("canvas");
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext("2d", { alpha: false });
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, width, height);
+    ctx.drawImage(img, 0, 0, width, height);
+    return new Promise((resolve, reject) => {
+      canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error("Compression failed")), "image/jpeg", JPEG_QUALITY);
+    });
+  }
+
+  async function uploadFiles(fileList) {
+    if (!isOwner || !session) return;
+    const t = tx();
+    const remaining = MAX_PHOTOS - photos.length;
+    if (remaining <= 0) {
+      setStatus(t.limit, "error");
+      return;
+    }
+    const files = [...fileList].filter(f => f.type.startsWith("image/")).slice(0, remaining);
+    if (!files.length) return;
+
+    setStatus(t.uploading);
+    els.photoInput.disabled = true;
+    try {
+      for (let i = 0; i < files.length; i++) {
+        const blob = await compress(files[i]);
+        const id = crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+        const path = `${album.slug}/${id}.jpg`;
+
+        const upload = await sb.storage.from(BUCKET).upload(path, blob, {
+          contentType: "image/jpeg",
+          upsert: false,
+          cacheControl: "3600"
+        });
+        if (upload.error) throw upload.error;
+
+        const insert = await sb.from("album_photos").insert({
+          album_id: album.id,
+          storage_path: path,
+          sort_order: photos.length + i,
+          uploaded_by: session.user.id
+        });
+        if (insert.error) {
+          await sb.storage.from(BUCKET).remove([path]);
+          throw insert.error;
+        }
+      }
+      await fetchPhotos();
+      renderGallery();
+      setStatus(t.uploaded, "success");
+    } catch (error) {
+      console.error(error);
+      setStatus(t.error, "error");
+    } finally {
+      els.photoInput.value = "";
+      els.photoInput.disabled = false;
+    }
+  }
+
+  async function deletePhoto(photo) {
+    const t = tx();
+    if (!confirm(t.deleteConfirm)) return;
+    setStatus("");
+    try {
+      const remove = await sb.storage.from(BUCKET).remove([photo.storage_path]);
+      if (remove.error) throw remove.error;
+      const del = await sb.from("album_photos").delete().eq("id", photo.id);
+      if (del.error) throw del.error;
+      photos = photos.filter(p => p.id !== photo.id);
+      renderGallery();
+      setStatus(t.deleted, "success");
+    } catch (error) {
+      console.error(error);
+      setStatus(t.error, "error");
+    }
+  }
+
+  async function startAlbum() {
+    applyAlbumLanguage();
+
+    if (!albumSlug) {
+      els.noAlbum.classList.add("show");
+      els.viewer.classList.remove("show");
+      els.claimPanel.hidden = true;
+      els.editorPanel.hidden = true;
+      return;
+    }
+
+    if (!sb) {
+      setStatus(tx().libraryError, "error");
+      return;
+    }
+
+    setStatus(tx().loading);
+    try {
+      await getPersistedSession();
+      await fetchAlbum();
+      if (!album) {
+        setStatus(tx().notFound, "error");
+        return;
+      }
+      await fetchPhotos();
+      await checkOwner();
+      renderState();
+      setStatus("");
+    } catch (error) {
+      console.error(error);
+      setStatus(tx().error, "error");
+    }
+  }
+
+  els.claimButton.addEventListener("click", claimAlbum);
+  els.saveButton.addEventListener("click", saveAlbum);
+  els.photoInput.addEventListener("change", event => uploadFiles(event.target.files));
+  if (typeof langEl !== "undefined") {
+    langEl.addEventListener("change", () => setTimeout(applyAlbumLanguage, 0));
+  }
+
+  startAlbum();
+})();
+</script>
+
 </body>
 </html>
